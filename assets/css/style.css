@@ -1,0 +1,260 @@
+:root{
+    --regular-font: #777;
+    --bg-teal: #4aaaa5;
+    --header-bg: #ffffff;
+    --header-border: #cccccc;
+    --footer-bg: #666;
+    --main-content-bg: #fff;
+    --main-content-border: #ddd;
+}
+
+
+html, body{
+    box-sizing: border-box;
+}
+body{
+    background: url("../images/hypnotize.png") repeat;
+    color: var(--regular-font);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
+}
+hr{
+    border-color: lightgray;
+}
+h1{
+    font-size: 2.7em;
+}
+h2{
+    font-size: 2.3em
+}
+h3{
+    font-size: 1.8em;
+}
+p{
+    font-size: 1.3em;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/* NAV BAR */
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    line-height: 1.6;
+    background: var(--header-bg);
+    width: 100%;
+    border-bottom: 1px solid var(--header-border);
+    -webkit-box-shadow: 0px 0px 72px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 72px -13px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 72px -13px rgba(0,0,0,0.75);
+
+}
+.nav-content{
+    width: 80%;
+    margin: 0 auto;
+    height: 50px;
+}
+.logo{
+    float: left;
+    background: var(--bg-teal);
+    padding: 0 15px;
+    color: white;
+}
+.nav-links{
+    float: right;
+    text-align: center;
+    margin-top: 1em;
+}
+.nav-links li{
+    font-size: 1.4em;
+    display: inline-block;
+    padding: 0 10px;
+}
+.nav-links li a{
+    color: var(--regular-font);
+}
+.nav-links li:nth-child(2){
+    border-left: dotted 1px lightgray;
+    border-right: dotted 1px lightgrey;
+}
+.nav-links a:hover{
+    opacity: .7;
+}
+/* MAIN CONTENT */
+.container{
+    display: block;
+    width: 80%;
+    min-height: calc(100vh - 200px);
+    margin: 0 auto;
+    padding-top: 100px;
+    clear: both;
+    
+}
+.about{
+    float: left;
+    width: 60%;
+    background: white;
+    padding: 35px;
+    line-height: 1.6;
+    border: solid 1px var(--main-content-border);
+    -webkit-box-shadow: 0px 0px 72px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 72px -13px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 72px -13px rgba(0,0,0,0.75);
+}
+.title{
+    color: var(--bg-teal);
+}
+.profile{
+    float: left;
+    height: 150px;
+    width: 200px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+.sidebar{
+    float: right;
+    width: 50%;
+    background: white;
+    text-align: center;
+    color: #4aaaa5;
+    padding: 15px;
+    border: solid 1px var(--main-content-border);
+    -webkit-box-shadow: 0px 0px 72px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 72px -13px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 72px -13px rgba(0,0,0,0.75);
+    
+}
+i.fa{
+    font-size: 2.5em;
+}
+footer{
+    font-size: .7em;
+    color: white;
+    background: var(--footer-bg);
+    border-top: solid 5px var(--bg-teal);
+    padding-top: 25px;
+    margin-top: 25px;
+    text-align: center;
+    height: 35px;
+    width: 100%;
+}
+
+/* CONTACT PAGE CUSTOM */
+input{
+    width: 100%;
+    border: dotted 1px lightgray;
+    padding: 10px 0 10px 10px;
+}
+textarea{
+    width: 100%;
+    border: dotted 1px lightgray;
+    padding: 8px 0 8px 8px;;  
+}
+#submit{
+    background: var(--bg-teal);
+    padding: 5px 15px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    width: 100px;
+    margin-top: 10px;
+}
+
+/* PORTFOLIO IMAGES */
+
+}
+.portfolio-images .portfolio-container{
+    width: 48%;
+    height: auto;
+    margin: 1%;
+    float: left;
+    position: relative;
+}
+.portfolio-container img{
+    width: 100%;
+    height: 200px;
+}
+.portfolio-container .title{
+    z-index: 1;
+    position: absolute;
+    background: var(--bg-teal);
+    color: white;
+    width: 100%;
+    bottom: 20%;
+    font-size: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 979px) {
+    .nav-content{
+        width: 95%;
+    }
+    
+    .container{
+        width: 95%;
+
+    }
+    
+    .logo h1{
+        font-size: 2.5em;
+    }
+    .nav-links{
+        font-size: .9em;
+    }
+    .nav-content{
+        height: auto;
+    }
+    nav ul.nav-links{
+        margin: auto 0;
+        margin-top: 15px;
+    }
+    .about{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+    }
+    .profile{
+        height: auto;
+        width: 50%;
+    }
+    .sidebar{
+        margin-top: 50px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .portfolio-images{
+        height: auto;
+    }
+
+
+
+
+/* MAX Width 768 */
+@media screen and (max-width: 768px){
+    
+.container{
+width: 95%;
+padding-bottom: 300px;
+}
+.profile {
+width: 50%;
+}
+
+/* MAX Width 640 */
+@media screen and (max-width: 640px){
+    
+.container{
+width: 95%;
+padding-bottom: 200px;
+}
+.profile{
+width: 100%;
+}
+
+
